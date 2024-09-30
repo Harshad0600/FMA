@@ -1,0 +1,171 @@
+/* General Styles */
+.app-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feedback-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.feedback-card .status {
+    float: right;
+    font-weight: bold;
+}
+
+.feedback-card .timestamp {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space */
+}
+
+.overlay h2 {
+    margin-bottom: 15px; /* Margin for the name */
+}
+
+.overlay textarea {
+    resize: none; /* Prevent resizing */
+    width: 80%; /* Reduced width for textarea */
+    height: 100px; /* Fixed height for textarea */
+    margin: 0 auto 15px; /* Center textarea with auto margins */
+}
+
+/* Button Styles */
+.actions {
+    display: flex; /* Use flexbox to align buttons side by side */
+    justify-content: center; /* Center the buttons */
+    margin-bottom: 15px; /* Space below the action buttons */
+}
+
+.actions button {
+    height: 40px; /* Set a fixed height for all buttons */
+    width: 100px; /* Fixed width for buttons */
+    margin: 0 5px; /* Margin between buttons */
+}
+.actions .acc{
+    background-color: green;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+.actions .acc:hover{
+    background-color: hsla(120, 100%, 25%, 0.878);
+}
+
+.actions .add{
+    background-color: blue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+.actions .add:hover{
+    background-color: hsla(240, 100%, 50%, 0.851);
+}
+
+.actions .ing{
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+.actions .ing:hover{
+    background-color: rgba(255, 166, 0, 0.938);
+}
+
+/* Close Button */
+.close-button {
+    height: 40px; /* Set height same as action buttons */
+    width: 100px; /* Fixed width for close button */
+    margin: 0 auto; /* Center the close button */
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.close-button:hover{
+    background-color: hsla(0, 100%, 50%, 0.848);
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.error-message{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 799px) {
+    .overlay {
+        width: 90%;
+        height: 50%;
+        left: 5%;
+        top: 25%;
+    }
+
+    .actions button, .close-button {
+        max-width: 100%; 
+    }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+    .overlay {
+        width: 84%;
+        height: 30%;
+        left:5.2%;
+        top: 35%;
+    }
+}
+
+@media (max-width: 599px) {
+    .overlay {
+        width: 80%;
+        height: 30%;
+        left: 6.7%;
+        top: 35%;
+    }
+}
+
+@media (min-width:350px) and (max-width: 500px) {
+    .overlay {
+        width: 78%;
+        height: 30%;
+        left: 6%;
+        top: 35%;
+    }
+}
